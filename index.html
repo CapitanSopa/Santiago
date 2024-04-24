@@ -29,8 +29,8 @@
 <body onclick="myFunction()">
     <h1>Santiago</h1>
     <div id ="inline">
-        <img src="assets/images/santiago.png" alt="Yo">
-        <img src="assets/images/explosion.gif" id="explosion" style ="display: none;position: absolute; width: 400px;" onclick="myFunction()" > 
+        <img src="santiago.png" alt="Yo">
+        <img src="explosion.gif" id="explosion" style ="display: none;position: absolute; width: 400px;" onclick="myFunction()" > 
     <script>
         
         console.log("test")
@@ -38,8 +38,8 @@
 
         function myFunction() {
             window.clearTimeout(myTimeout);
-            document.getElementById("explosion").src = "assets/images/santiago.jpeg"
-            document.getElementById("explosion").src = "assets/images/explosion.gif"
+            document.getElementById("explosion").src = "santiago.jpeg"
+            document.getElementById("explosion").src = "explosion.gif"
 
             var posX = window.event.pageX;
             var posY = window.event.pageY;
