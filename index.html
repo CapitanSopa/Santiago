@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago</title>
+    <style>
+        h1{
+            color: orange;
+            text-align: center;
+        }
+        body {
+            cursor: url('capyIcon.png'), auto;
+            height: 110%;
+            padding:0;
+            margin:0;
+            background-size: 100%;
+        }
+        div {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+            width: 50%;
+        }
+    
+        </style>
+</head>
+<body onclick="myFunction()">
+    <h1>Santiago</h1>
+    <div id ="inline">
+        <img src="assets/images/santiago.png" alt="Yo">
+        <img src="assets/images/explosion.gif" id="explosion" style ="display: none;position: absolute; width: 400px;" onclick="myFunction()" > 
+    <script>
+        
+        console.log("test")
+        var myTimeout;
+
+        function myFunction() {
+            window.clearTimeout(myTimeout);
+            document.getElementById("explosion").src = "assets/images/santiago.jpeg"
+            document.getElementById("explosion").src = "assets/images/explosion.gif"
+
+            var posX = window.event.pageX;
+            var posY = window.event.pageY;
+            document.getElementById("explosion").style.left=(posX-120) + "px";
+            document.getElementById("explosion").style.top=(posY-230) + "px";
+
+            document.getElementById('explosion').style.display='Block';
+            myTimeout = window.setTimeout("document.getElementById('explosion').style.display='none';", 1500)
+        }
+    </script>
+
+</body>
+</html>
